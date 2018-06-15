@@ -10,9 +10,12 @@
   "author": "Akash Gajjar <akashgajjar8@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
+    "lodash": "^4.17.10",
+    "marked": "^0.4.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
