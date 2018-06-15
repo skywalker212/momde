@@ -12,15 +12,19 @@ export default class Editor extends React.Component{
     }
 
     componentDidMount() {
-        const json = JSON.parse(localStorage.getItem('markdown'));
-        this.setState({
-            markdown: json
-        });
+        if(localStorage.getItem('markdown')!=='undefined'){
+            const json = JSON.parse(localStorage.getItem('markdown'));
+            this.setState({
+                markdown: json
+            });
+        }
     }
 
     componentDidUpdate(){
-        const json = JSON.stringify(this.state.markdown);
-        localStorage.setItem('markdown',json);
+        if(this.state.markdown){
+            const json = JSON.stringify(this.state.markdown);
+            localStorage.setItem('markdown',json);
+        }
     }
 
     constructor(){

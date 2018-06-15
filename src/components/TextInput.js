@@ -9,7 +9,7 @@ export default class TextInput extends React.Component{
     render() {
         return (
             <div className="editor-input">
-                <textarea style={{minWidth:'100%'}} value={this.props.markdown?this.props.markdown:''} onChange={this.makeChange} autoFocus/>
+                <textarea style={{minWidth:'100%',minHeight:'90vh'}} value={this.props.markdown} onChange={this.makeChange} autoFocus/>
             </div>
         );
     }
