@@ -12,7 +12,7 @@ export default class Editor extends React.Component{
     }
 
     componentDidMount() {
-        if(localStorage.getItem('markdown')!=='undefined'){
+        if(sessionStorage.getItem('markdown')!=='undefined'){
             const json = JSON.parse(localStorage.getItem('markdown'));
             this.setState({
                 markdown: json
@@ -23,7 +23,7 @@ export default class Editor extends React.Component{
     componentDidUpdate(){
         if(this.state.markdown){
             const json = JSON.stringify(this.state.markdown);
-            localStorage.setItem('markdown',json);
+            sessionStorage.setItem('markdown',json);
         }
     }
 
